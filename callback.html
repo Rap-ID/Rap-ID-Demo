@@ -38,12 +38,12 @@
   <script>
     var token = Request('token');
     var usmid;
-    $.get('http://wiauth.hackerchai.com/user/current/token=' + token, {}, function(data) {
+    $.get('http://wiauth.hackerchai.com/api/user/current/token=' + token, {}, function(data) {
       $('#account').html(data.data.account);
       var uid=data.data.uid;
-      $.get('http://wiauth.hackerchai.com/user/list/uid='+uid,{},function(user){
+      $.get('http://wiauth.hackerchai.com/api/user/list/uid='+uid,{},function(user){
         var usmid=user.uid.usmid;
-        $.get('http://wiauth.hackerchai.com/identity/list/usmid='+usmid,{},function(id){
+        $.get('http://wiauth.hackerchai.com/api/identity/list/usmid='+usmid,{},function(id){
           $('#identity').html(id.identity);
         },'json');
       },'json');
