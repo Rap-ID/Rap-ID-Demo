@@ -40,13 +40,13 @@
     var usmid;
     $.get('http://wiauth.hackerchai.com/api/user/current/token=' + token, {}, function(data) {
       $('#account').html(data.data.account);
-      var uid=data.data.uid;
-      $.get('http://wiauth.hackerchai.com/api/user/list/uid='+uid,{},function(user){
-        var usmid=user.data.usmid;
-        $.get('http://wiauth.hackerchai.com/api/identity/list/usmid='+usmid,{},function(id){
+      var uid = data.data.uid;
+      $.get('http://wiauth.hackerchai.com/api/user/list/uid=' + uid + '&token=' + token, {}, function(user) {
+        var usmid = user.data.usmid;
+        $.get('http://wiauth.hackerchai.com/api/identity/list/usmid=' + usmid, {}, function(id) {
           $('#identity').html(id.data.identity);
-        },'json');
-      },'json');
+        }, 'json');
+      }, 'json');
     }, 'json');
   </script>
 </body>
