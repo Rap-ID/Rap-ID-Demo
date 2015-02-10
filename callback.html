@@ -43,7 +43,7 @@
       $.get('http://wiauth.hackerchai.com/api/user/list/account=' + data.data.account + '&token=' + token, {}, function(user) {
         var usmid = user.data.items[0].usmid;
         $.get('http://wiauth.hackerchai.com/api/identity/list/usmid=' + usmid, {}, function(id) {
-          $('#identity').html(id.data.identity);
+          $('#identity').html(id.data.items[0].identity);
         }, 'json');
       }, 'json');
     }, 'json');
