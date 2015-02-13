@@ -17,7 +17,15 @@
         <h3 class="panel-title">用户名</h3>
       </div>
       <div class="panel-body" id="account">
-        account
+        loading...
+      </div>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">姓名</h3>
+      </div>
+      <div class="panel-body" id="realname">
+        loading...
       </div>
     </div>
     <div class="panel panel-success">
@@ -25,7 +33,7 @@
         <h3 class="panel-title">身份证号</h3>
       </div>
       <div class="panel-body" id="identity">
-        account
+        loading...
       </div>
     </div>
   </div>
@@ -45,6 +53,7 @@
         var iccid = user.data.items[0].iccid;
         $.get('http://wiauth.hackerchai.com/api/identity/list/iccid=' + iccid, function(id) {
           $('#identity').html(id.data.items[0].identity);
+          $('#realname').html(id.data.items[0].name);
         }, 'json');
       }, 'json');
     }, 'json');
