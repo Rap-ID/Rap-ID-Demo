@@ -1,29 +1,38 @@
 .header {
-  height: 300px;
+  height: 600px;
 }
 .header-content {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .header-title {
-  height: 250px;
-  padding-top: 10px;
+  height: 460px;
+  padding-top: 140px;
   color: #ffffff;
   text-align: center;
 }
 .header-title-text {
   font-size: 80px;
 }
+.header-title-btn {
+  padding-top: 20px;
+}
+
 .content {
   padding-top: 60px;
   padding-left: 15%;
   padding-right: 15%;
   font-size: 16pt;
 }
+.banner {
+  padding-left: 20%;
+  padding-right: 5%;
+  weight: 55%;
+  display: inline;
+}
 .footer {
-  padding-top: 40px;
   font-size: 16pt;
 }
 .footer-content {
